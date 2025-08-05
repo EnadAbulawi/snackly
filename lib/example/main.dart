@@ -1,6 +1,6 @@
-import 'package:custom_snack_bar/custom_snack_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:snackify/snackify_custom_snackbar.dart';
 
 void main() {
   runApp(GetMaterialApp(home: MyHomePage()));
@@ -16,7 +16,7 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            CustomSnackBar.show(
+            Snackify.show(
               title: 'تم',
               message: 'تمت العملية بنجاح!',
               type: SnackbarType.success,

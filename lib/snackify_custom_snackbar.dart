@@ -5,7 +5,7 @@ enum SnackbarType { success, error, warning, info }
 
 enum SnackbarPosition { top, bottom }
 
-class CustomSnackBar {
+class Snackify {
   static void show({
     required String title,
     required String message,

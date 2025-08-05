@@ -1,4 +1,4 @@
-# custom_snackbar
+# Snackify
 
 A smart and customizable Snackbar widget for Flutter, built using [GetX](https://pub.dev/packages/get).  
 This widget allows you to quickly show styled snackbars for different message types (success, error, info, warning).
@@ -21,10 +21,21 @@ This widget allows you to quickly show styled snackbars for different message ty
 
 ```yaml
 dependencies:
-  custom_snackbar: ^0.0.1
+  Snackify: ^0.0.1
 
 
-#   custom_snackbar: ^0.0.1
+```
+
+### Usage
+
+```dart
+Snackify.show(
+  title: 'Success',
+  message: 'Operation completed successfully',
+  type: SnackbarType.success,
+  position: SnackbarPosition.top,
+);
+```
 
 
 Snackbar ذكي قابل للتخصيص باستخدام GetX. مثالي لعرض التنبيهات بطريقة أنيقة وسريعة.
@@ -39,7 +50,7 @@ Snackbar ذكي قابل للتخصيص باستخدام GetX. مثالي لعر
 ## الاستخدام
 
 ```dart
-CustomwSnackbar.show(
+Snackify.show(
   title: 'تم',
   message: 'تمت العملية بنجاح',
   type: SnackbarType.success,
