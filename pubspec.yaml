@@ -1,4 +1,4 @@
-name: Snackly 
+name: snackly 
 description: A smart, customizable, and reusable snackbar widget for Flutter apps using GetX.
 version: 0.0.1
 homepage: https://github.com/EnadAbulawi/custom_snackbar
