@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:snackify/snackly_custom_snackbar.dart';
+import 'package:snackly/snackly_custom_snackbar.dart';
 
 void main() {
   runApp(GetMaterialApp(home: MyHomePage()));
