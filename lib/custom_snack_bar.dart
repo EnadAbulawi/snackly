@@ -1,5 +1,3 @@
-library custom_snackbar;
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,17 +12,17 @@ class CustomSnackBar {
     SnackbarType type = SnackbarType.info,
     SnackbarPosition position = SnackbarPosition.bottom,
     Duration duration = const Duration(seconds: 3),
-    IconData? icon,
+    IconData? icons,
     Color? backgroundColor,
     Color? textColor,
   }) {
     final Color defaultTextColor = Colors.white;
 
     // تحديد الألوان والأيقونات حسب النوع
-    final _typeData = _getTypeData(type);
-    final _icon = icon ?? _typeData.icon;
-    final _bgColor = backgroundColor ?? _typeData.backgroundColor;
-    final _txtColor = textColor ?? defaultTextColor;
+    final typeData = _getTypeData(type);
+    final icon = icons ?? typeData.icon;
+    final bgColor = backgroundColor ?? typeData.backgroundColor;
+    final txtColor = textColor ?? defaultTextColor;
 
     Get.snackbar(
       '',
@@ -33,16 +31,16 @@ class CustomSnackBar {
         title,
         style: TextStyle(
           fontSize: 16,
-          color: _txtColor,
+          color: txtColor,
           fontWeight: FontWeight.bold,
         ),
       ),
       messageText: Text(
         message,
-        style: TextStyle(fontSize: 14, color: _txtColor),
+        style: TextStyle(fontSize: 14, color: txtColor),
       ),
-      backgroundColor: _bgColor,
-      icon: Icon(_icon, color: _txtColor),
+      backgroundColor: bgColor,
+      icon: Icon(icon, color: txtColor),
       snackPosition: position == SnackbarPosition.top
           ? SnackPosition.TOP
           : SnackPosition.BOTTOM,
@@ -74,7 +72,6 @@ class CustomSnackBar {
           icon: Icons.warning,
         );
       case SnackbarType.info:
-      default:
         return _SnackbarTypeData(
           backgroundColor: Color(0xFF2196F3),
           icon: Icons.info,

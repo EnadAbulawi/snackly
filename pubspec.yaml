@@ -1,8 +1,9 @@
 name: custom_snack_bar
 description: "A new Flutter package project."
 version: 0.0.1
-homepage: https://github.com/yourusername/smart_snackbar
-repository: https://github.com/yourusername/smart_snackbar
+homepage: https://github.com/EnadAbulawi/custom_snackbar
+repository: https://github.com/EnadAbulawi/custom_snackbar
+license: MI
 
 environment:
   sdk: ^3.8.1
