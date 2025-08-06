@@ -5,6 +5,16 @@ homepage: https://github.com/EnadAbulawi/custom_snackbar
 repository: https://github.com/EnadAbulawi/custom_snackbar
 license: MI
 
+screenshots:
+  - path: assets/screenshots/success.png
+    description: A success snackbar with RTL Arabic text
+  - path: assets/screenshots/error.png
+    description: An error snackbar with LTR Arabic text
+  - path: assets/screenshots/warning.png
+    description: A warning snackbar with RTL Arabic text
+  - path: assets/screenshots/info.png
+    description: An info snackbar with LTR Arabic text
+
 environment:
   sdk: ^3.8.1
   flutter: ">=1.17.0"

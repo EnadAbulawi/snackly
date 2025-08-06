@@ -15,6 +15,7 @@ class Snackly {
     IconData? icons,
     Color? backgroundColor,
     Color? textColor,
+    final String? fontFamily,
   }) {
     final Color defaultTextColor = Colors.white;
 
@@ -29,15 +30,18 @@ class Snackly {
       '',
       titleText: Text(
         title,
+        textDirection: getTextDirection(title),
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           color: txtColor,
           fontWeight: FontWeight.bold,
+          fontFamily: fontFamily,
         ),
       ),
       messageText: Text(
         message,
-        style: TextStyle(fontSize: 14, color: txtColor),
+        textDirection: getTextDirection(message),
+        style: TextStyle(fontSize: 18, color: txtColor, fontFamily: fontFamily),
       ),
       backgroundColor: bgColor,
       icon: Icon(icon, color: txtColor),
@@ -58,22 +62,22 @@ class Snackly {
     switch (type) {
       case SnackbarType.success:
         return _SnackbarTypeData(
-          backgroundColor: Color(0xFF4CAF50),
+          backgroundColor: Color(0xFF78A083),
           icon: Icons.check_circle,
         );
       case SnackbarType.error:
         return _SnackbarTypeData(
-          backgroundColor: Color(0xFFF44336),
+          backgroundColor: Color(0xFFF7374F),
           icon: Icons.error,
         );
       case SnackbarType.warning:
         return _SnackbarTypeData(
-          backgroundColor: Color(0xFFFFC107),
+          backgroundColor: Color(0xFFDCA06D),
           icon: Icons.warning,
         );
       case SnackbarType.info:
         return _SnackbarTypeData(
-          backgroundColor: Color(0xFF2196F3),
+          backgroundColor: Color(0xFF535C91),
           icon: Icons.info,
         );
     }
@@ -85,4 +89,9 @@ class _SnackbarTypeData {
   final IconData icon;
 
   _SnackbarTypeData({required this.backgroundColor, required this.icon});
+}
+
+TextDirection getTextDirection(String text) {
+  final arabicRegex = RegExp(r'[\u0600-\u06FF]');
+  return arabicRegex.hasMatch(text) ? TextDirection.rtl : TextDirection.ltr;
 }

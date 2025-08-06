@@ -1,3 +1,8 @@
-## 0.0.1
+## 0.0.3
 
-* TODO: Describe initial release.
+### Added
+- RTL/LTR text direction based on message language.
+- Custom fontFamily support.
+
+### Fixed
+- Improved responsiveness on small devices.
