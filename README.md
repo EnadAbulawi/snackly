@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/logo.png" width="120" alt="Snackly Logo" />
 </p>
 
-<h1 align="center">🍩 Snackly</h1>
+<h1 align="center">Snackly</h1>
 
 
 # Snackly - Smart Flutter Snackbar
@@ -29,7 +29,7 @@ This widget allows you to quickly show styled snackbars for different message ty
 
 ```yaml
 dependencies:
-  Snackify: ^0.0.1
+  snackly: ^0.0.2
 
 
 ```
@@ -45,30 +45,37 @@ Snackly.show(
 );
 ```
 
+<h1 align="center">Snackly</h1>
 
 Snackly - سنـاك بار ذكي لفلاتر
 Snackly هو ودجت Snackbar ذكي، قابل لإعادة الاستخدام، وذو تصميم جذاب ومخصص مبني على مكتبة GetX.
 
 ## الميزات
 ✅ سهولة الاستخدام بسطر واحد فقط
+
 ✅ دعم أنماط مختلفة (نجاح، خطأ، تحذير، معلومات)
+
 ✅ قابل لإعادة الاستخدام في كل أجزاء التطبيق
+
 ✅ مبني على GetX
+
 ✅ تحديد نوع التنبيه  
+
 ✅ تحديد الموقع (أعلى/أسفل)  
+
 ✅ تخصيص الألوان والأيقونة  
+
 ✅ تصميم جاهز وجذاب
 
 
 📦 التثبيت
-
 dependencies:
-  snackly: ^0.0.1
+  snackly: ^0.0.2
 
 
 ## الاستخدام
 
-```dart
+
 Snackly.show(
   title: 'تم',
   message: 'تمت العملية بنجاح',
