@@ -6,3 +6,4 @@
 
 ### Fixed
 - Improved responsiveness on small devices.
+- Fixed Colors To Visible Text 
