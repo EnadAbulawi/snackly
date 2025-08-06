@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/logo.png" width="120" alt="Snackly Logo" />
 </p>
 
-<h1 align="center">Snackly</h1>
+<h1 align="center">Snackly ❤️ </h1>
 
 
 # Snackly - Smart Flutter Snackbar
@@ -13,23 +13,33 @@ This widget allows you to quickly show styled snackbars for different message ty
 
 ---
 
+🖼️ Screenshots
+<p float="left"> <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/success.png" width="45%" /> <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/error.png" width="45%" /> </p> <p float="left"> <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/warning.png" width="45%" /> <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/info.png" width="45%" /> </p>
+
+
+
 ## ✨ Features
 
-- 🎯 Easy to use
+- 🎯 Easy to use / one-line usage
+- 🌐 RTL / LTR text direction auto-detection
+- 🖼️ Add custom icons
 - 🎨 Supports multiple types: success, error, warning, info
 - ⚙️ Fully customizable (colors, icons, duration, etc.)
+- ⏱️ Duration control
 - 📍 Show on top or bottom of the screen
 - ♻️ Reusable across projects
+- 📦 Built on top of GetX
+
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started ✨
 
-### Add dependency
+### Add dependency 📦
 
 ```yaml
 dependencies:
-  snackly: ^0.0.2
+  snackly: ^0.0.4
 
 
 ```
@@ -45,7 +55,7 @@ Snackly.show(
 );
 ```
 
-<h1 align="center">Snackly</h1>
+<h1 align="center">Snackly ❤️ </h1>
 
 Snackly - سنـاك بار ذكي لفلاتر
 Snackly هو ودجت Snackbar ذكي، قابل لإعادة الاستخدام، وذو تصميم جذاب ومخصص مبني على مكتبة GetX.
@@ -54,6 +64,8 @@ Snackly هو ودجت Snackbar ذكي، قابل لإعادة الاستخدام
 ✅ سهولة الاستخدام بسطر واحد فقط
 
 ✅ دعم أنماط مختلفة (نجاح، خطأ، تحذير، معلومات)
+
+✅ تحديد اتجاه النص تلقائيًا حسب اللغة
 
 ✅ قابل لإعادة الاستخدام في كل أجزاء التطبيق
 
@@ -68,23 +80,24 @@ Snackly هو ودجت Snackbar ذكي، قابل لإعادة الاستخدام
 ✅ تصميم جاهز وجذاب
 
 
-📦 التثبيت
+### 📦 التثبيت
 dependencies:
   snackly: ^0.0.2
 
 
-## الاستخدام
+### الاستخدام
 
-
+```
 Snackly.show(
   title: 'تم',
   message: 'تمت العملية بنجاح',
   type: SnackbarType.success,
   position: SnackbarPosition.top,
 );
-
+```
 
 
 🧑‍💻 Author
-Developed by Enad Abulawi 🇵🇸
+Developed with ❤️ by Enad Abulawi 🇵🇸
+GitHub Profile : https://github.com/EnadAbulawi
 Contributions & PRs are welcome ✌️
