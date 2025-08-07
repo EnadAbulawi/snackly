@@ -1,8 +1,8 @@
 name: snackly 
 description: A smart, customizable, and reusable snackbar widget for Flutter apps using GetX.
-version: 0.0.5
-homepage: https://github.com/EnadAbulawi/custom_snackbar
-repository: https://github.com/EnadAbulawi/custom_snackbar
+version: 0.0.6
+homepage: https://github.com/EnadAbulawi/snackly
+repository: https://github.com/EnadAbulawi/snackly
 license: MI
 
 screenshots:
@@ -13,6 +13,8 @@ screenshots:
   - path: assets/screenshots/warning.png
     description: A warning snackbar with RTL Arabic text
   - path: assets/screenshots/info.png
+    description: An info snackbar with LTR Arabic text
+  - path: assets/screenshots/progress.png
     description: An info snackbar with LTR Arabic text
 
 environment:

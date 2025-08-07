@@ -17,7 +17,7 @@
 
 ---
 
-## 🌟 What's New in v0.0.5
+## 🌟 What's New in v0.0.6
 
 - 🎯 **Enhanced Progress Indicators** - Beautiful, smooth progress bars at the bottom
 - 🎨 **Gradient Backgrounds** - Support for stunning gradient backgrounds
@@ -42,7 +42,7 @@
 
 <p float="left">
   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/progress.png" width="45%" />
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/gradient.png" width="45%" />
+  <!-- <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/gradient.png" width="45%" /> -->
 </p>
 
 ---
@@ -90,8 +90,8 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  snackly: ^2.0.0
-  get: ^4.6.5  # Required peer dependency
+  snackly: ^0.0.6
+
 ```
 
 ---
