@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart'; // لاستخدام HapticFeedback
 import 'package:get/get.dart';
 
 enum SnackbarType { success, error, warning, info, custom }
@@ -17,7 +18,6 @@ class SnacklyConfig {
     vertical: 16,
   );
 
-  // إعدادات الألوان الافتراضية
   static Color successColor = const Color(0xFF4CAF50);
   static Color errorColor = const Color(0xFFF44336);
   static Color warningColor = const Color(0xFFFF9800);
@@ -45,7 +45,7 @@ class Snackly {
     EdgeInsets? padding,
     bool? isDismissible,
     bool showProgressIndicator = false,
-    double? progressValue, // للتحكم بقيمة التقدم
+    double? progressValue,
     VoidCallback? onTap,
     String? actionLabel,
     VoidCallback? onActionPressed,
@@ -54,7 +54,6 @@ class Snackly {
     bool enableHapticFeedback = true,
     Gradient? backgroundGradient,
   }) {
-    // إعدادات افتراضية
     final effectiveDuration = duration ?? SnacklyConfig.defaultDuration;
     final effectiveFontFamily = fontFamily ?? SnacklyConfig.defaultFontFamily;
     final effectiveBorderRadius =
@@ -63,14 +62,14 @@ class Snackly {
     final effectivePadding = padding ?? SnacklyConfig.defaultPadding;
     final effectiveIsDismissible = isDismissible ?? SnacklyConfig.isDismissible;
 
-    // تحديد بيانات النوع
     final typeData = _getTypeData(type, backgroundColor, icon);
     final finalIcon = icon ?? typeData.icon;
-    final finalBgColor = backgroundColor ?? typeData.backgroundColor;
+    final finalBgColor =
+        backgroundColor ?? typeData.backgroundColor ?? Colors.grey;
     final finalTextColor = textColor ?? Colors.white;
     final finalIconColor = iconColor ?? finalTextColor;
 
-    // Haptic feedback
+    // الاهتزاز
     if (enableHapticFeedback && SnacklyConfig.enableHapticFeedback) {
       _performHapticFeedback(type);
     }
@@ -135,7 +134,6 @@ class Snackly {
           : effectivePadding,
       isDismissible: effectiveIsDismissible,
       dismissDirection: DismissDirection.horizontal,
-      // أنيميشن محسن وسلس
       forwardAnimationCurve: Curves.easeOutCubic,
       reverseAnimationCurve: Curves.easeInCubic,
       animationDuration: const Duration(milliseconds: 350),
@@ -147,7 +145,6 @@ class Snackly {
     );
   }
 
-  // دوال مساعدة للعرض السريع
   static void success({
     required String title,
     required String message,
@@ -208,20 +205,12 @@ class Snackly {
     );
   }
 
-  // إخفاء جميع الـ Snackbars
-  static void closeAll() {
-    Get.closeAllSnackbars();
-  }
+  static void closeAll() => Get.closeAllSnackbars();
 
-  // إخفاء الـ Snackbar الحالي
-  static void close() {
-    Get.closeCurrentSnackbar();
-  }
+  static void close() => Get.closeCurrentSnackbar();
 
-  // التحقق من وجود Snackbar نشط
   static bool get isSnackbarOpen => Get.isSnackbarOpen;
 
-  // دالة لعرض Snackbar بتحديث تدريجي
   static void showWithProgress({
     required String title,
     required String message,
@@ -238,7 +227,7 @@ class Snackly {
       message: message,
       type: type,
       showProgressIndicator: true,
-      duration: const Duration(hours: 1), // مدة طويلة للانتظار
+      duration: const Duration(hours: 1),
     );
 
     try {
@@ -257,7 +246,6 @@ class Snackly {
     }
   }
 
-  // دالة لعرض تقدم بقيمة محددة
   static void showProgressValue({
     required String title,
     required String message,
@@ -275,7 +263,6 @@ class Snackly {
     );
   }
 
-  // الدوال المساعدة الخاصة
   static _SnackbarTypeData _getTypeData(
     SnackbarType type,
     Color? customBg,
@@ -304,9 +291,27 @@ class Snackly {
         );
       case SnackbarType.custom:
         return _SnackbarTypeData(
-          backgroundColor: customBg ?? Colors.grey[600]!,
+          backgroundColor: customBg ?? Colors.grey[600] ?? Colors.grey,
           icon: customIcon ?? Icons.notifications_rounded,
         );
+    }
+  }
+
+  static void _performHapticFeedback(SnackbarType type) {
+    switch (type) {
+      case SnackbarType.success:
+      case SnackbarType.info:
+        HapticFeedback.lightImpact();
+        break;
+      case SnackbarType.warning:
+        HapticFeedback.mediumImpact();
+        break;
+      case SnackbarType.error:
+        HapticFeedback.heavyImpact();
+        break;
+      case SnackbarType.custom:
+        HapticFeedback.selectionClick();
+        break;
     }
   }
 
@@ -379,7 +384,6 @@ class Snackly {
     ];
   }
 
-  // بناء Snackbar مخصص مع شريط التقدم
   static Widget _buildCustomSnackbarWithProgress({
     required String title,
     required String message,
@@ -407,15 +411,12 @@ class Snackly {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // المحتوى الرئيسي
           Row(
             children: [
-              // الأيقونة
               if (icon != null) ...[
                 Icon(icon, color: iconColor, size: 28),
                 const SizedBox(width: 12),
               ],
-              // النصوص
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -444,7 +445,6 @@ class Snackly {
                   ],
                 ),
               ),
-              // زر الإجراء
               if (actionLabel != null && onActionPressed != null)
                 TextButton(
                   onPressed: onActionPressed,
@@ -467,7 +467,6 @@ class Snackly {
                 ),
             ],
           ),
-          // شريط التقدم في الأسفل
           const SizedBox(height: 12),
           ClipRRect(
             borderRadius: BorderRadius.circular(6),
@@ -484,21 +483,15 @@ class Snackly {
       ),
     );
   }
-
-  static void _performHapticFeedback(SnackbarType type) {
-    // يمكنك إضافة مكتبة haptic feedback هنا
-    // مثل: HapticFeedback.lightImpact() أو حسب النوع
-  }
 }
 
 class _SnackbarTypeData {
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final IconData? icon;
 
-  _SnackbarTypeData({required this.backgroundColor, this.icon});
+  _SnackbarTypeData({this.backgroundColor, this.icon});
 }
 
-// دالة للتحقق من اتجاه النص (عربي/إنجليزي)
 TextDirection getTextDirection(String text) {
   final arabicRegex = RegExp(
     r'[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]',
@@ -506,10 +499,9 @@ TextDirection getTextDirection(String text) {
   return arabicRegex.hasMatch(text) ? TextDirection.rtl : TextDirection.ltr;
 }
 
-// Extension لاستخدام أسهل
 extension SnacklyExtension on String {
   void showAsSuccess({String? title}) {
-    Snackly.success(title: title ?? "نجح", message: this);
+    Snackly.success(title: title ?? "نجاح", message: this);
   }
 
   void showAsError({String? title}) {
