@@ -17,10 +17,9 @@ class MyHomePage extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             Snackly.show(
-              title: 'تم',
-              message: 'تمت العملية بنجاح!',
-              type: SnackbarType.success,
-              position: SnackbarPosition.top,
+              context: context,
+              title: 'نجاح',
+              message: 'تمت العملية بنجاح ✅',
             );
           },
           child: Text('عرض Snackbar'),
