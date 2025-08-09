@@ -44,8 +44,19 @@
 </p>
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/loading_progress.png" width="45%" />
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/gradient_custom.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/progress.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/gradient.png" width="45%" />
+   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/customicon.png" width="45%" />
+    <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/top.png" width="45%" />
+
+</p>
+
+<p float="left">
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/withclosebutton.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/withcustomwidget.png" width="45%" />
+   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/customicon.png" width="45%" />
+    <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/withstyle.png" width="45%" />
+
 </p>
 
 ---
