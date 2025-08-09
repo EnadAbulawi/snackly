@@ -17,7 +17,7 @@
 
 ---
 
-## 🌟 What's New in v1.0.0
+## 🌟 What's New in v0.0.7
 
 - 🚀 **Complete Rewrite** - Built from scratch with modern Flutter architecture
 - 🎭 **Overlay System** - Independent overlay rendering for better performance
@@ -37,10 +37,10 @@
 ## 🖼️ Screenshots
 
 <p float="left">
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/success_filled.png" width="22%" />
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/error_outlined.png" width="22%" />
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/warning_minimal.png" width="22%" />
-  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/info_elevated.png" width="22%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/success.png" width="22%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/error.png" width="22%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/warning.png" width="22%" />
+  <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/screenshots/info.png" width="22%" />
 </p>
 
 <p float="left">
@@ -97,7 +97,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  snackly: ^1.0.0
+  snackly: ^0.0.7
 ```
 
 ---
@@ -781,7 +781,7 @@ Special thanks to:
 - 📧 Email: [noorazkar7@gmail.com](mailto:noorazkar7@gmail.com)
 - 💼 LinkedIn: [Enad Abulawi](https://linkedin.com/in/enadabulawi1)
 - 🐙 GitHub: [@EnadAbulawi](https://github.com/EnadAbulawi)
-- 🐦 Twitter: [@EnadAbulawi](https://twitter.com/EnadAbulawi)
+
 
 ---
 
@@ -797,12 +797,12 @@ If Snackly helped you build something amazing:
 - 💡 **Suggest features** to make it even better
 - 🔄 **Contribute code** to be part of the journey
 
-### Community & Support
+<!-- ### Community & Support
 
 Join our growing community:
 - 📱 **Telegram Group**: [Snackly Community](https://t.me/snackly_flutter)
 - 💬 **Discord Server**: [Flutter Snackly](https://discord.gg/snackly)
-- 📊 **GitHub Discussions**: [Ask Questions](https://github.com/EnadAbulawi/snackly/discussions)
+- 📊 **GitHub Discussions**: [Ask Questions](https://github.com/EnadAbulawi/snackly/discussions) -->
 
 ---
 
@@ -816,11 +816,11 @@ Join our growing community:
 
 ---
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://raw.githubusercontent.com/EnadAbulawi/snackly/main/assets/footer.png" width="100%" alt="Snackly Footer" />
-</p>
+</p> -->
 
----
+<!-- --- -->
 
 <div align="center">
   
