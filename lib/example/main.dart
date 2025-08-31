@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:snackly/snackly.dart';
 
 void main() {
-  runApp(GetMaterialApp(home: MyHomePage()));
+  runApp(MaterialApp(home: MyHomePage()));
 }
 
 class MyHomePage extends StatelessWidget {
@@ -12,7 +11,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Smart Snackbar Example")),
+      appBar: AppBar(title: Text(" Snackly Example")),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

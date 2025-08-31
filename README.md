@@ -17,7 +17,7 @@
 
 ---
 
-## 🌟 What's New in v0.0.7
+## 🌟 What's New in v0.0.8
 
 - 🚀 **Complete Rewrite** - Built from scratch with modern Flutter architecture
 - 🎭 **Overlay System** - Independent overlay rendering for better performance
@@ -108,7 +108,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  snackly: ^0.0.7
+  snackly: ^0.0.8
 ```
 
 ---
@@ -617,7 +617,7 @@ context.showSuccess("Data saved successfully!");
 
 ---
 
-## 🏆 Why Choose Snackly?
+## 🏆 Why Choose Snackly ?
 
 ### 🚀 **Performance First**
 - **Overlay Rendering** - No dependency on Scaffold
